@@ -23,6 +23,10 @@ app.use(userRoutes);
 const offerRoutes = require('./routes/offer');
 app.use(offerRoutes);
 
+app.get('/', (req, res) => {
+	res.json('Hello Heroku');
+});
+
 app.all('*', (req, res) => {
 	res.status(404).json({ message: "Cette route n'existe pas" });
 });
