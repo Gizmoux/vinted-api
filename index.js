@@ -9,7 +9,7 @@ const app = express();
 app.use(formidable());
 app.use(cors());
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect('mongodb://localhost/vinted-app');
 cloudinary.config({
 	cloud_name: 'doysyenot',
 	api_key: '536348866497363',
